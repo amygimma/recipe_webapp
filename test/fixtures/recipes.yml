@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  name: MyString
+  ingredients: MyString
+  notes: MyText
+  instructions: MyText
+  estimated_time: MyString
+
+two:
+  user_id: 1
+  name: MyString
+  ingredients: MyString
+  notes: MyText
+  instructions: MyText
+  estimated_time: MyString

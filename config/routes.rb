@@ -1,5 +1,12 @@
 RecipeWebapp::Application.routes.draw do
+  get "recipes/create"
+  get "recipes/new"
+  get "recipes/edit"
+  get "recipes/show"
+  get "recipes/update"
+  get "recipes/destroy"
   devise_for :users
+  resource :recipes
   get "/", :to => "static#home"
   get "/about", :to => "static#about"
   get "/contact", :to => "static#contact"
