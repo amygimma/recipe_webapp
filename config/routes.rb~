@@ -1,5 +1,11 @@
 RecipeWebapp::Application.routes.draw do
   devise_for :users
+  patch "recipes/update/:id", :to => "recipes#update",   as: :recipe_update
+  delete "recipes/destroy/:id", :to => "recipes#destroy"
+
+  get "/recipes/edit/:id", :to => "recipes#edit"
+  resource :recipes
+  get "/recipes/:id", :to => "recipes#read", as: :recipe_show
   get "/", :to => "static#home"
   get "/about", :to => "static#about"
   get "/contact", :to => "static#contact"

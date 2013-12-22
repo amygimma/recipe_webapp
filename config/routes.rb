@@ -1,12 +1,11 @@
 RecipeWebapp::Application.routes.draw do
-  get "recipes/create"
-  get "recipes/new"
-  get "recipes/edit"
-  get "recipes/show"
-  get "recipes/update"
-  get "recipes/destroy"
   devise_for :users
+  patch "recipes/update/:id", :to => "recipes#update",   as: :recipe_update
+  get "recipes/destroy/:id", :to => "recipes#destroy"
+
+  get "/recipes/edit/:id", :to => "recipes#edit"
   resource :recipes
+  get "/recipes/:id", :to => "recipes#read", as: :recipe_show
   get "/", :to => "static#home"
   get "/about", :to => "static#about"
   get "/contact", :to => "static#contact"

@@ -9,7 +9,7 @@
     <strong>Ingredients: </strong><%= simple_format(recipe.ingredients) %><br>
     <strong>Notes: </strong><%= recipe.notes %><br>
     <strong>Instructions: </strong><%= simple_format(recipe.instructions) %><br>
-    <a href="/recipes/<%= recipe.id %>">View</a>
+    <a href="/recipes/update/<%= recipe.id %>">View</a>
   </p>
   <br>
 </div>
