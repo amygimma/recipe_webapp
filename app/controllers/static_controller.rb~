@@ -3,13 +3,11 @@ class StaticController < ApplicationController
   end
 
   def about
-   
+    if not user_signed_in? 
+      redirect_to "/"
+    end
   end
 
   def contact
   end
 end
-
-# if not user_signed_in? 
- #     redirect_to "/"
- #   end

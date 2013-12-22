@@ -1,4 +1,5 @@
 RecipeWebapp::Application.routes.draw do
+  devise_for :users
   get "/", :to => "static#home"
   get "/about", :to => "static#about"
   get "/contact", :to => "static#contact"
